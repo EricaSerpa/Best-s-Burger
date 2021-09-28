@@ -3,11 +3,11 @@
 
 
 .logo {
-  position: absolute;
-  justify-content: center;
-  margin-top: -10rem;
-  text-align:right;
-  width: 655px;
+    position: absolute;
+    justify-content: center;
+    margin-top: -10rem;
+    text-align:right;
+    width: 655px;
 }
 
 main {
