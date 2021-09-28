@@ -3,11 +3,11 @@
 
 
 .logo {
-  position: fixed;
-  justify-content: center;
-  margin-top: -10rem;
-  text-align:right;
-  width: 655px;
+    position: absolute;
+    justify-content: center;
+    margin-top: -10rem;
+    text-align:right;
+    width: 655px;
 }
 
 main {
@@ -91,7 +91,7 @@ h1 {
       }
 
     .container-login {
-        margin-bottom: -520px;
+        margin-bottom: -620px;
       }
     .form-login-inputs input {
        width: 18rem;
