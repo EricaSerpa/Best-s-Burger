@@ -48,7 +48,7 @@ export function Register() {
                 }
 
                 /*if (json.role === "salão") {
-                    history.push('/hall');
+                    history.push('/menu');
                 } else if
                     (json.role === "cozinha") {
                     history.push('/kitchen');
@@ -115,7 +115,8 @@ export function Register() {
                         <Button
                             className="register-btn"
                             type="submit"
-                            value="Cadastrar">
+                            value="Cadastrar"
+                            onClick={handleSubmit}>Cadastrar
                         </Button>
                         <div className="footer-register">
                             Já tem uma conta cadastrada?

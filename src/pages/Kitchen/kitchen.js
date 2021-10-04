@@ -1,6 +1,6 @@
 import React from 'react';
 import { useHistory } from "react-router";
-//import { Button } from '../../components/Button/index.js';
+import { Button } from '../../components/Button/index.js';
 
 export const Kitchen = () => {
 
@@ -9,11 +9,15 @@ export const Kitchen = () => {
   return (
     <div className="container-kitchen">
       <h1>Cozinha</h1>
-      <button className='kitchen-btn' onClick={() => {
-        localStorage.removeItem('token')
+      <Button className="logoutBtn" onClick={() => {
+        localStorage.clear()
         history.push('/')
-      }}>Sair
-      </button>
+      }}>Sair</Button>
+
+      <Button className="returnBtn" onClick={() => {
+        localStorage.clear()
+        history.push('/hall')
+      }}>Voltar</Button>
     </div >
   );
 };

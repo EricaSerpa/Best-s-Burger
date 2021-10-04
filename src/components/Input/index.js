@@ -2,6 +2,7 @@ import React from "react";
 
 export function Input ({
     inputType,
+    inputText,
     inputName,
     inputPlaceholder,
     inputOnChange,
@@ -10,6 +11,7 @@ export function Input ({
     return (
         <input 
             type={inputType}
+            text={inputText}
             name={inputName}
             placeholder={inputPlaceholder}
             onChange={inputOnChange}

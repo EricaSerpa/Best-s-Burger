@@ -1,5 +1,7 @@
 @import './pages/Login/login.css';
 @import './pages/Register/register.css';
+@import './pages/Menu/menu.css';
+@import '../src/components/ItensMenu/ItensMenu.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
