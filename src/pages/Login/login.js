@@ -8,9 +8,6 @@ import { Link } from 'react-router-dom';
 import logo from '../../assets/img/logo.png';
 import validateLogin from '../Login/validateLogin';
 
-//import Burger from '../../assets/img/burger.png';
-
-//import './login.css';
 
 export function Login() {
 
@@ -42,7 +39,7 @@ export function Login() {
                 localStorage.setItem("token", token);
 
                 if (json.role === "salão") {
-                    history.push('/Hall');
+                    history.push('/Menu');
                 } else if
                     (json.role === "cozinha") {
                     history.push('/Kitchen');
@@ -85,7 +82,8 @@ export function Login() {
                         <Button
                             className="login-btn"
                             type="submit"
-                            value="Entrar">
+                            value="Entrar"
+                            onClick={handleSubmit}>Entrar
                         </Button>
                         <div className="footer-login">
                             Não tem uma conta?

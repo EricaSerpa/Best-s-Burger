@@ -9,8 +9,8 @@ export const NotFound = () => {
     return (
         <div className="container-notFound">
             <h1>Page 404! Está página não foi encontrada</h1>
-            <button className="return" onClick={() => {
-                localStorage.removeItem('token')
+            <button className='logOut-btn' onClick={() => {
+                localStorage.clear()
                 history.push('/')
             }}>Sair
         </button>
