@@ -1,17 +1,34 @@
 
 import React from 'react';
-import ButtonIntens from '../Button';
+import ButtonItens from '../Button';
 
-export default function CartItem(props) {
+export default function CartItem({
+    id,
+    quantity,
+    name,
+    price,
+    remove,
+    add
+
+}) {
     return (
-      <article key={props.id}>
-        <p>{props.nome}</p>
-        <p>{props.preco}</p>
-        <ButtonIntens
-          buttonType='text'
-          buttonOnClick={props.remove}
-          buttonText='-'
+        <article
+            key={id}>
+            <p>{quantity}</p>
+            <p>{name}</p>
+            <p>{price}</p>
+            <ButtonItens
+          btnType='text'
+          btnOnClick={remove}
+          btnText='-'
         />
-      </article> 
-   )
+        <ButtonItens
+          btnType='text'
+          btnOnClick={add}
+          btnText='+'
+        />
+        </article>
+    )
 }
+
+

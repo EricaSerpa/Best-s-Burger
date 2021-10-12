@@ -2,6 +2,7 @@
 @import './pages/Register/register.css';
 @import './pages/Menu/menu.css';
 @import '../src/components/ItensMenu/ItensMenu.css';
+@import '../src/components/CartArea/cartArea.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {

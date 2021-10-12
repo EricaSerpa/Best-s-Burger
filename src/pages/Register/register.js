@@ -14,7 +14,7 @@ export function Register() {
     const history = useHistory();
 
     const [formValues, setFormValues] = useState({
-        username: '',
+        name: '',
         email: '',
         password: '',
         password2: '',
@@ -39,8 +39,15 @@ export function Register() {
         userRegister(formValues)
             .then(response => response.json())
             .then((json) => {
+                console.log(json)
                 const token = json.token
                 localStorage.setItem("token", token);
+                localStorage.setItem("name", json.name);
+
+                /*if (json.email === 403) {
+                    setErrors(() => json.message);
+                    alert("Email já cadastrado")
+                }*/
 
                 if (json.id !== undefined) {
                     history.push('/login');
@@ -65,7 +72,7 @@ export function Register() {
     //console.log('***formValues', formValues);
 
     return (
-        <main>
+        <main className="main-register">
             <img src={burgerLeft} className="burgerLeft" alt="burgerLeft" />
             <div className="container-register">
                 <form className="form" onSubmit={handleSubmit}>
@@ -74,11 +81,11 @@ export function Register() {
                     <div className="form-register-inputs">
                         <Input
                             inputType="text"
-                            inputName="username"
+                            inputName="name"
                             inputPlaceholder="Nome Completo"
                             inputOnChange={handleInputChange}
-                            inputValue={formValues.username} />
-                        {errors.username && <p>{errors.username}</p>}
+                            inputValue={formValues.name} />
+                        {errors.name && <p>{errors.name}</p>}
                         <Input
                             inputType="text"
                             inputName="email"
@@ -110,7 +117,7 @@ export function Register() {
                             <option value=" ">Selecione sua área de trabalho</option>
                             <option value="salão">Salão</option>
                             <option value="cozinha">Cozinha</option>
-                        {errors.role && <p>{errors.role}</p>}
+                            {errors.role && <p>{errors.role}</p>}
                         </select>
                         <Button
                             className="register-btn"

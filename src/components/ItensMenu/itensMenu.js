@@ -7,22 +7,24 @@ export default function ItensMenu({
     image,
     flavor,
     complement,
-    onClickRemove,
     onClick
 }) {
     return (
-        <div>
+        <div className="container-products">
             <article
                 key={id}
-                className="itens-menu"
-                flavor={flavor}
-                complement={complement}
-                onClick={onClick} >
-                <img className="products-img" src={image} alt={`imagem do produto ${name}`} />
-                {/*<span>{id}</span>*/}
-                <span>{name}</span>
-                <span>Preço: R$ {price},00</span>
+                className="card-list">
+                <div className="card" onClick={onClick} >
+                    <img className="products-img" src={image} alt={`imagem do produto ${name}`} />
+                    {/*<span>{id}</span>*/}
+                    <div className="product-name">
+                        <span className="complement">{name} {flavor} {complement ? `+${complement}` : ''} </span>
+                        <span className="price">Preço: R$ {price},00</span>
+                    </div>
+                </div>
             </article>
         </div>
     );
 };
+
+

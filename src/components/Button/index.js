@@ -28,15 +28,15 @@ export function Button({
 }
 
 export default function ButtonItens({
-  buttonType,
-  buttonOnClick,
-  buttonText,
+  btnType,
+  btnOnClick,
+  children
 }) {
   return (
     <button
-      type={buttonType}
-      onClick={buttonOnClick}>
-      {buttonText}
+      type={btnType}
+      onClick={btnOnClick}>
+      {children}
     </button>
   );
 }
