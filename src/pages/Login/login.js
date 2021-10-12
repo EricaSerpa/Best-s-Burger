@@ -37,6 +37,7 @@ export function Login() {
 
                 const token = json.token
                 localStorage.setItem("token", token);
+                localStorage.setItem("name", json.name);
 
                 if (json.role === "salão") {
                     history.push('/Menu');

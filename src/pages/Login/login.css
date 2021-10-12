@@ -5,7 +5,7 @@
 .logo {
     position: absolute;
     justify-content: center;
-    margin-top: -15rem;
+    margin-bottom: 90px;
     text-align:right;
     width: 650px;
     opacity:0.8;
@@ -14,21 +14,16 @@
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
     height: 630px;
   }
 
  .container-login {
   display: flex;
-  margin-bottom: -720px;
+  margin-top: 40rem;
 }
 
 
 h1 {
-    width: 318px;
-    height: 25px;
-    left: 230px;
-    top: 446px;
     font-family: Cabin Sketch;
     font-style: normal;
     font-weight: normal;
@@ -36,7 +31,7 @@ h1 {
     line-height: 25px;
     color: var(--grey);
     margin-bottom: 30px;
-    text-align:right;
+    text-align:center;
 }
 
 .form-login-inputs input {
@@ -87,12 +82,12 @@ h1 {
 
 @media screen and (max-width: 640px) {
     .logo {
-        width: 400px;
-        margin-top: -10rem;
+        width: 500px;
+        height: 500px;
       }
 
     .container-login {
-        margin-bottom: -550px;
+        margin-top: 30rem;
       }
     .form-login-inputs input {
        width: 18rem;

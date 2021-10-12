@@ -6,7 +6,9 @@ export default function validateInfo(values) {
     } else if (values.customer.length < 3) {
         errors.customer = 'Necessário nome do cliente';
         alert("Não esqueça do nome do cliente");
-    }
+    }else if (!values.customer) {
+        alert("Digite o nome do cliente");
+      }
 
     if(!values.table) {
         errors.table = "Não esqueça de selecionar a Mesa que está atendendo"
@@ -24,5 +26,4 @@ export default function validateInfo(values) {
 
     return errors;
 }
-
 

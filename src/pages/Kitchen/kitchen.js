@@ -15,8 +15,7 @@ export const Kitchen = () => {
       }}>Sair</Button>
 
       <Button className="returnBtn" onClick={() => {
-        localStorage.clear()
-        history.push('/hall')
+        history.push('/Menu')
       }}>Voltar</Button>
     </div >
   );

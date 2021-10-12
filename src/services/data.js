@@ -5,7 +5,7 @@ export const userRegister = (formValues) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      name: formValues.username,
+      name: formValues.name,
       email: formValues.email,
       password: formValues.password,
       role: formValues.role,
@@ -30,14 +30,15 @@ export const userLogin = (formValues) => {
   });
 };
 
-export const userId = (userName, id) => {
+export const userId = (name, role, id) => {
   return fetch (`https://lab-api-bq.herokuapp.com/users/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify ({
-      "name": userName
+      "name": name,
+      "role": role
     })
   })
 }
@@ -51,4 +52,17 @@ export const getProducts = async () => {
     }
   })
 }
+
+
+export const setOrder = (objctOrder) => {
+  return fetch("https://lab-api-bq.herokuapp.com/orders", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization:`${localStorage.getItem("token")}`,
+       "accept": "application/json"
+    },
+    body: JSON.stringify(objctOrder)
+  });
+};
 

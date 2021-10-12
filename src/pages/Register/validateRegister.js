@@ -1,10 +1,10 @@
 export function validateRegister(values) {
     let errors = {}
 
-    if (!values.username.trim()) {
-        errors.username = 'Nome completo obrigatório';
-    } else if (values.username.length < 10) {
-        errors.username = 'Necessário nome completo';
+    if (!values.name.trim()) {
+        errors.name = 'Nome completo obrigatório';
+    } else if (values.name.length < 10) {
+        errors.name = 'Necessário nome completo';
     }
 
     if (!values.email) {
