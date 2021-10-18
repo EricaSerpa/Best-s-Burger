@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from "react";
-import ItensMenu from '../../components/ItensMenu/itensMenu';
 import { useHistory } from "react-router";
 import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js';
+import CartArea from '../../components/CartArea/cartArea';
+import ItensMenu from '../../components/ItensMenu/itensMenu';
 import { Link } from 'react-router-dom';
 import validateHall from './validateHall.js';
-import CartArea from '../../components/CartArea/cartArea'
 import { setOrder } from '../../services/data';
+
 
 export const Menu = () => {
 
@@ -18,8 +19,8 @@ export const Menu = () => {
   const [itemsList, setItemsList] = useState([]);
   const [formValues, setFormValues] = useState({
     table: '',
-    customer: '',
-    name: '',
+    client: '',
+    products: []
   });
 
   useEffect(() => {
@@ -102,15 +103,12 @@ export const Menu = () => {
     const orderList = itemsList.map(e => ({ "id": `${e.id}`, "qtd": `${e.quantity}` }))
     setOrder({
 
-      "client": formValues.customer,
+      "client": formValues.client,
       "table": parseInt(formValues.table),
       "products": orderList
 
-    })
-
-      .then((resp) => resp.json())
-      .then((json) => {
-        console.log("deu certo")
+    }).then((resp) => resp.json())
+      .catch((json) => {
         if (json.message) {
           alert('Ocorreu um erro, tente novamente!')
         } else {
@@ -122,9 +120,8 @@ export const Menu = () => {
   return (
     <div className="container-hall">
       <header className="header">
-        <h1 className="attendant"> Atendente | {localStorage.getItem("name")} </h1>
-        <Link className="linkRequest" to="/kitchen"> Pedidos </Link>
-        <Link className="linkRequest" to="/kitchen"> Acompanhar Pedidos </Link>
+        <h1 className="attendant"> 🍔🥤🍟  Atendente | {localStorage.getItem("name")} </h1>
+        <Link className="linkRequest" to="/readyOrders"> Pedidos Prontos para entrega </Link>
         <Button className="logoutBtn" onClick={() => {
           localStorage.clear()
           history.push('/')
@@ -136,11 +133,11 @@ export const Menu = () => {
           <div className="customer">
             <Input
               inputType="text"
-              inputName="customer"
+              inputName="client"
               inputPlaceholder="Digite o nome do cliente"
               inputOnChange={handleInputChange}
-              inputValue={formValues.customer} />
-            {errors.customer && <p>{errors.customer}</p>}
+              inputValue={formValues.client} />
+            {errors.client && <p>{errors.client}</p>}
             <select
               className="form-table"
               name="table"
@@ -148,12 +145,12 @@ export const Menu = () => {
               onChange={handleInputChange}
               value={formValues.table}>
               <option value=" ">Selecione a Mesa que está atendendo</option>
-              <option value="1">001</option>
-              <option value="2">002</option>
-              <option value="3">003</option>
-              <option value="4">004</option>
-              <option value="5">005</option>
-              <option value="6">006</option>
+              <option value="001">001</option>
+              <option value="002">002</option>
+              <option value="003">003</option>
+              <option value="004">004</option>
+              <option value="005">005</option>
+              <option value="006">006</option>
               {errors.table && <p>{errors.table}</p>}
             </select>
           </div>
@@ -192,4 +189,4 @@ export const Menu = () => {
       </div>
     </div>
   );
-}
+};

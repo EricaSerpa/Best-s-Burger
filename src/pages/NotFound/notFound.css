@@ -1,0 +1,84 @@
+.error-page{
+    margin-top: 5%;
+    width: 790px;
+    height: 590px;
+}
+
+
+.logOut-btn {
+    border-radius: 30px;
+    background: transparent;
+    color: var(--ice);
+    font-size: 18px;
+    font-family: Cabin Sketch;
+    font-style: normal;
+    border: (var--ice);
+    cursor: pointer;
+    width: 10rem;
+    height: 2.500rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.logOut-btn:hover {
+    background-color: var(--aqua);
+    color: var(--ice);
+    border: 1px solid var(--green);
+    outline: none;
+}
+
+@media screen and (max-width: 1440px) {
+    .logOut-btn {
+        align-items: center;
+    }
+
+    .error-page{
+        margin-top: 20%;
+    }
+
+    }
+
+@media screen and (max-width: 1024px) {
+    .logOut-btn {
+        align-items: center;
+    }
+
+    .error-page{
+        margin-top: 20%;
+    }
+
+    }
+
+@media screen and (max-width: 768px) {
+    .error-page{
+        margin-top: 20%;
+        margin-right: 2rem;
+        width: 490px;
+        height: 410px;
+    }
+
+    .logOut-btn {
+        margin-left: 4rem;
+        width: 6rem;
+        height: 2.200rem;
+    }  
+
+}
+
+@media screen and (max-width: 640px) {
+    .error-page{
+        margin-top: 20%;
+        margin-right: 2rem;
+        width: 390px;
+        height: 310px;
+    }
+
+    .logOut-btn {
+        margin-left: 4rem;
+        width: 6rem;
+        height: 2.200rem;
+    }
+}

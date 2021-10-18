@@ -16,7 +16,6 @@ export default function ItensMenu({
                 className="card-list">
                 <div className="card" onClick={onClick} >
                     <img className="products-img" src={image} alt={`imagem do produto ${name}`} />
-                    {/*<span>{id}</span>*/}
                     <div className="product-name">
                         <span className="complement">{name} {flavor} {complement ? `+${complement}` : ''} </span>
                         <span className="price">Preço: R$ {price},00</span>

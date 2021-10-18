@@ -41,7 +41,7 @@
 .linkRequest {
     border-radius: 30px;
     background: var(--ice);
-    width: 12rem;
+    width: 18rem;
     height: 2.100rem;
     cursor: pointer;
     font-size: 18px;
@@ -143,6 +143,11 @@
     font-family: Cabin Sketch;
     font-style: normal;
     margin: 40px;
+
+    min-height: 17px;
+    position: relative;
+    bottom: 5px;
+    text-align: center;
     
 }
 
@@ -157,4 +162,89 @@
     cursor: pointer;
     width: 6rem;
     height: 2.100rem;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .customer{
+        margin-top: 4%;
+        margin:4%
+    }
+
+    .menu-btn{
+        margin-bottom: 2rem; 
+    }
+
+    .btn-menuA {
+        width: 15rem;
+        height: 2.500rem;
+        right: 5;
+        margin: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .btn-menuB {
+        width: 15rem;
+        height: 2.500rem;
+        right: 5;
+        margin: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .form-hall-inputs input {
+        width: 15rem;
+        height: 2.500rem;
+    }
+
+    .form-table {
+        width: 15rem;
+        height: 2.500rem;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .customer{
+        margin-top: 15%;
+        margin: 15%;
+    }
+
+    .menu-btn{
+        margin-bottom: 2rem; 
+    }
+
+    .btn-menuA {
+        width: 15rem;
+        height: 2.500rem;
+        right: 5;
+        margin: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .btn-menuB {
+        width: 15rem;
+        height: 2.500rem;
+        right: 5;
+        margin: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .form-hall-inputs input {
+        width: 15rem;
+        height: 2.500rem;
+    }
+
+    .form-table {
+        width: 15rem;
+        height: 2.500rem;
+    }
 }

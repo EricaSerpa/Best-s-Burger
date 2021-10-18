@@ -57,6 +57,6 @@ export default function CartArea({
             </div>
         </div>
     );
-}
+};
 
 

@@ -1,21 +1,21 @@
 import React from "react";
 
-export function Input ({
+export function Input({
     inputType,
     inputText,
     inputName,
     inputPlaceholder,
     inputOnChange,
-    inputValue  
+    inputValue
 }) {
     return (
-        <input 
+        <input
             type={inputType}
             text={inputText}
             name={inputName}
             placeholder={inputPlaceholder}
             onChange={inputOnChange}
             value={inputValue}
-            />
-    )
-}
+        />
+    );
+};

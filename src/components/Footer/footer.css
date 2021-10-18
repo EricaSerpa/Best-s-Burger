@@ -1,0 +1,17 @@
+.footer-text{
+    font-family: Cabin Sketch;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--grey);
+    text-align:center;
+    margin-left: 6%;
+}
+
+a{
+    font-family: Cabin Sketch;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: var(--aqua);
+}

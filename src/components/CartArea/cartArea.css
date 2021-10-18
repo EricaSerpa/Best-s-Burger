@@ -130,3 +130,36 @@ h5 {
     border: 1px solid var(--green);
     outline: none;
 }
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .command-container {
+        margin: 10% 3%;
+        width: 100%;
+        height: 600px;
+    }
+
+    .container {
+        margin-right: 5%;
+
+    }
+
+
+    
+}
+
+@media screen and (max-width: 768px) {
+
+    .command-container {
+        margin: 1% 1%;
+        width: 130%;
+        height: 800px;
+    }
+
+    .container {
+        margin-right: 25%;
+
+    }
+}

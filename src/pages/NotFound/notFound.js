@@ -1,19 +1,22 @@
 import { useHistory } from 'react-router';
-//import { Button } from '../../components/Button/index.js';
-//import './login.css';
+import error from '../../assets/img/error.png'
 
 export const NotFound = () => {
 
     const history = useHistory()
 
     return (
-        <div className="container-notFound">
-            <h1>Page 404! Está página não foi encontrada</h1>
-            <button className='logOut-btn' onClick={() => {
-                localStorage.clear()
-                history.push('/')
-            }}>Sair
+        <main>
+            <div className="container-notFound">
+                <img src={error}
+                    className="error-page"
+                    alt="error-page" />
+                <button className='logOut-btn' onClick={() => {
+                    localStorage.clear()
+                    history.push('/')
+                }}>Sair
         </button>
-        </div >
+            </div >
+        </main>
     );
 };

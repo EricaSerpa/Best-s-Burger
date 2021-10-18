@@ -5,6 +5,7 @@ import { userLogin } from '../../services/data';
 import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js';
 import { Link } from 'react-router-dom';
+import { Footer } from '../../components/Footer/footer';
 import logo from '../../assets/img/logo.png';
 import validateLogin from '../Login/validateLogin';
 
@@ -52,10 +53,6 @@ export function Login() {
             })
     };
 
-
-
-    //console.log('***formValues', formValues);
-
     return (
 
         <main>
@@ -90,9 +87,11 @@ export function Login() {
                             Não tem uma conta?
                     <Link className="link" to="/Register"> Cadastre-se </Link>
                         </div>
+                        <Footer />
                     </div>
                 </form>
             </div>
         </main>
+
     );
 };
