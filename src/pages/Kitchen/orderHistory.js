@@ -3,60 +3,36 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { Button } from '../../components/Button/index.js';
 import { getAllOrders } from '../../services/data';
-import Orders from "../../components/CardOrders/Orders/orders";
+import AllOrders from "../../components/CardOrders/AllOrders/allOrders";
 
 
 
-export const Kitchen = () => {
+export const OrderHistory = () => {
 
-  const [allOrders, setAllOrders] = useState([]);
+  const [orders, setOrders] = useState([]);
   const token = localStorage.getItem('token');
   const history = useHistory();
-  const sortListOrders = () => allOrders.sort((a, b) => b.id - a.id);
+  const sortListOrders = () => orders.sort((a, b) => b.id - a.id);
 
 
   useEffect(() => {
     getAllOrders()
       .then((response) => {
         response.json()
-          .then((json) => {
-            const preparingOrder = json.filter(
-              (item) =>
-                item.status.includes('preparing') ||
-                item.status.includes('pending')
-            );
-            setAllOrders(preparingOrder);
+          .then((order) => {
+            setOrders(order);
           });
       });
   }, []);
 
 
-  const handlePreparing = (data) => {
+  const handleDelete = (order) => {
     const url = 'https://lab-api-bq.herokuapp.com/orders/';
-    const id = data.id;
-    const status = { status: 'preparing' };
-
-    fetch(url + id, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `${token}`,
-      },
-      body: JSON.stringify(status),
-    }).then((response) => {
-      response.json().then(() => {
-
-      });
-    });
-  };
-
-  const handleFinished = (data) => {
-    const url = 'https://lab-api-bq.herokuapp.com/orders/';
-    const id = data.id;
+    const id = order.id;
     const status = { status: 'ready' };
 
     fetch(url + id, {
-      method: 'PUT',
+      method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `${token}`,
@@ -64,15 +40,15 @@ export const Kitchen = () => {
       body: JSON.stringify(status),
     }).then((response) => {
       response.json().then(() => {
-
       });
     });
   };
+
 
   return (
     <div className="container-kitchen">
       <header className="header-kitchen">
-        <h1 className="chef"> 🍽️  COZINHA - Chef | {localStorage.getItem("name")} </h1>
+        <h1 className="chef"> 🍽️  COZINHA - Chef | {localStorage.getItem("name")}</h1>
         <div className="status-btn">
           <Button
             className="btn-preparo"
@@ -90,6 +66,12 @@ export const Kitchen = () => {
               history.push('/orderHistory')
             }}>Histórico dos Pedidos
           </Button>
+          <Button
+            className="returnBtn"
+            onClick={() => {
+              history.push('/Kitchen')
+            }}>Voltar
+          </Button>
           <Button className="logoutBtn" onClick={() => {
             localStorage.clear()
             history.push('/')
@@ -98,15 +80,14 @@ export const Kitchen = () => {
         </div>
       </header>
       <div className="header-title">
-        <h3 className="title">PEDIDOS PENDENTES</h3>
+        <h3 className="title">HISTÓRICO DE TODOS OS PEDIDOS</h3>
       </div>
       <div className="container-card-orders">
         {sortListOrders().map((order) => (
-          <Orders
+          <AllOrders
             key={order.id}
             order={order}
-            handlePreparing={handlePreparing}
-            handleFinished={handleFinished}
+            handleDelete={handleDelete}
           />
         ))}
       </div>

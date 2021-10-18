@@ -3,38 +3,38 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 import { Button } from '../../components/Button/index.js';
 import { getAllOrders } from '../../services/data';
-import Orders from "../../components/CardOrders/Orders/orders";
+import OrdersDelivery from "../../components/CardOrders/OrderDelivery/ordersDelivery";
 
 
+export const ReadyOrder = () => {
 
-export const Kitchen = () => {
-
-  const [allOrders, setAllOrders] = useState([]);
+  const [readyOrders, setReadyOrders] = useState([]);
   const token = localStorage.getItem('token');
   const history = useHistory();
-  const sortListOrders = () => allOrders.sort((a, b) => b.id - a.id);
-
+  const sortListOrders = () => readyOrders.sort((a, b) => b.id - a.id);
 
   useEffect(() => {
     getAllOrders()
       .then((response) => {
         response.json()
-          .then((json) => {
-            const preparingOrder = json.filter(
-              (item) =>
-                item.status.includes('preparing') ||
-                item.status.includes('pending')
+          .then((data) => {
+            const products = data;
+            const deliveryOrders = products.filter((item) =>
+              item.status.includes('ready') ||
+              item.status.includes('finished')
             );
-            setAllOrders(preparingOrder);
+            setReadyOrders(deliveryOrders);
           });
       });
   }, []);
 
 
-  const handlePreparing = (data) => {
+
+
+  const handleDelivery = (data) => {
     const url = 'https://lab-api-bq.herokuapp.com/orders/';
     const id = data.id;
-    const status = { status: 'preparing' };
+    const status = { status: 'finished' };
 
     fetch(url + id, {
       method: 'PUT',
@@ -45,26 +45,6 @@ export const Kitchen = () => {
       body: JSON.stringify(status),
     }).then((response) => {
       response.json().then(() => {
-
-      });
-    });
-  };
-
-  const handleFinished = (data) => {
-    const url = 'https://lab-api-bq.herokuapp.com/orders/';
-    const id = data.id;
-    const status = { status: 'ready' };
-
-    fetch(url + id, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `${token}`,
-      },
-      body: JSON.stringify(status),
-    }).then((response) => {
-      response.json().then(() => {
-
       });
     });
   };
@@ -72,23 +52,21 @@ export const Kitchen = () => {
   return (
     <div className="container-kitchen">
       <header className="header-kitchen">
-        <h1 className="chef"> 🍽️  COZINHA - Chef | {localStorage.getItem("name")} </h1>
+        <h1 className="chef"> 🍔🥤🍟  Atendente | {localStorage.getItem("name")} </h1>
         <div className="status-btn">
           <Button
             className="btn-preparo"
             type="submit"
             text="Em preparo"
             onClick={() => {
-              history.push('/Kitchen')
-            }}>Pedidos Pendentes
+              history.push('/readyOrders')
+            }}>Pedidos Prontos para Entrega
           </Button>
           <Button
-            className="btn-pronto"
-            type="submit"
-            text="Histórico dos Pedidos"
+            className="returnBtn"
             onClick={() => {
-              history.push('/orderHistory')
-            }}>Histórico dos Pedidos
+              history.push('/Menu')
+            }}>Voltar
           </Button>
           <Button className="logoutBtn" onClick={() => {
             localStorage.clear()
@@ -97,16 +75,12 @@ export const Kitchen = () => {
         </Button>
         </div>
       </header>
-      <div className="header-title">
-        <h3 className="title">PEDIDOS PENDENTES</h3>
-      </div>
       <div className="container-card-orders">
         {sortListOrders().map((order) => (
-          <Orders
+          <OrdersDelivery
             key={order.id}
             order={order}
-            handlePreparing={handlePreparing}
-            handleFinished={handleFinished}
+            handleDelivery={handleDelivery}
           />
         ))}
       </div>

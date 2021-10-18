@@ -69,7 +69,6 @@ export function Register() {
                 console.log(errors)
             });
     };
-    //console.log('***formValues', formValues);
 
     return (
         <main className="main-register">

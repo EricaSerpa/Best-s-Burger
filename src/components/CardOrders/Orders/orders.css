@@ -1,0 +1,112 @@
+.card-product{
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 17rem;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 8px -1px var(--aqua);
+    background-color: var(--white);
+    border: 5px solid var(--aqua);
+    box-shadow: inset 0 3px 3px 0 #666;
+    box-shadow: 0 4.81626px 4.81626px rgba(0,0,0,.25);
+}
+
+.card-order{
+    color: var(--black);
+    font-size: 18px;
+    font-family: Cabin Sketch;
+    font-style: normal;
+    width: 16rem;
+    margin: 2rem;
+    padding: .6rem;
+}
+
+
+
+.line{
+    border-top: .15rem solid var(--aqua);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.order-list{
+    padding: .8rem;
+
+}
+
+.status-orders{
+    font-family: Cabin Sketch;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--ice);
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: var(--aqua);
+    border-radius: 1.0rem 1.0rem 0 0;
+    line-height: .5px;
+    text-transform: uppercase;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-status {
+    padding-left: 4rem;
+}
+
+.pending-btn {
+    border-radius: 30px;
+    background: var(--aqua);
+    color: var(--ice);
+    font-size: 18px;
+    font-family: Cabin Sketch;
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    height: 2.500rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.pending-btn:hover {
+    background-color: var(--orange);
+    color: var(--ice);
+    border: 1px solid var(--green);
+    outline: none;
+}
+
+.preparing-btn {
+    border-radius: 30px;
+    background: var(--aqua);
+    color: var(--ice);
+    font-size: 18px;
+    font-family: Cabin Sketch;
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    height: 2.500rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+}
+
+.preparing-btn:hover {
+    background-color: var(--yellow);
+    color: var(--ice);
+    border: 1px solid var(--green);
+    outline: none;
+}
+

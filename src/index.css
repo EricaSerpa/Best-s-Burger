@@ -1,8 +1,13 @@
 @import './pages/Login/login.css';
 @import './pages/Register/register.css';
 @import './pages/Menu/menu.css';
-@import '../src/components/ItensMenu/ItensMenu.css';
-@import '../src/components/CartArea/cartArea.css';
+@import './pages/Kitchen/kitchen.css';
+@import './components/ItensMenu/ItensMenu.css';
+@import './components/CartArea/cartArea.css';
+@import './components/CardOrders/Orders/orders.css';
+@import './components/CardOrders/OrderDelivery/orderDelivery.css';
+@import './components/Footer/footer.css';
+@import './pages/NotFound/notFound.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
