@@ -5,7 +5,6 @@ import { Button } from '../../components/Button/index.js';
 import { Input } from '../../components/Input/index.js';
 import CartArea from '../../components/CartArea/cartArea';
 import ItensMenu from '../../components/ItensMenu/itensMenu';
-import { Link } from 'react-router-dom';
 import validateHall from './validateHall.js';
 import { setOrder } from '../../services/data';
 
@@ -107,21 +106,36 @@ export const Menu = () => {
       "table": parseInt(formValues.table),
       "products": orderList
 
-    }).then((resp) => resp.json())
+    })
+    
+    .then((resp) => { alert('Pedido realizado com sucesso!')
+      return resp.json()})
+
       .catch((json) => {
-        if (json.message) {
-          alert('Ocorreu um erro, tente novamente!')
-        } else {
-          alert('Pedido realizado com sucesso!')
-        }
+        alert('Ocorreu um erro, tente novamente!')
       })
-  }
+  };
 
   return (
     <div className="container-hall">
       <header className="header">
-        <h1 className="attendant"> 🍔🥤🍟  Atendente | {localStorage.getItem("name")} </h1>
-        <Link className="linkRequest" to="/readyOrders"> Pedidos Prontos para entrega </Link>
+        <h1 className="attendant"> Atendente | {localStorage.getItem("name")} </h1>
+        <Button
+            className="btn-ready"
+            type="submit"
+            text="pedido pronto"
+            onClick={() => {
+              history.push('/readyOrders')
+            }}>Pedidos Prontos para entrega
+          </Button>
+        <Button
+            className="btn-history"
+            type="submit"
+            text="Histórico dos Pedidos"
+            onClick={() => {
+              history.push('/orderHistory')
+            }}>Histórico dos Pedidos
+          </Button>
         <Button className="logoutBtn" onClick={() => {
           localStorage.clear()
           history.push('/')
@@ -156,12 +170,12 @@ export const Menu = () => {
           </div>
           <div className='menu-btn'>
             <Button className='btn-menuA'
-              type="submit"
+              type="button"
               value='Menu principal'
               onClick={() => filterMenu('all-day')}>Menu principal
            </Button>
             <Button className='btn-menuB'
-              type="submit"
+              type="button"
               value='Menu matinal'
               onClick={() => filterMenu('breakfast')}>Menu matinal
            </Button>

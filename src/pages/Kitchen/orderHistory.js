@@ -38,20 +38,25 @@ export const OrderHistory = () => {
         Authorization: `${token}`,
       },
       body: JSON.stringify(status),
-    }).then((response) => {
-      response.json().then(() => {
-      });
-    });
-  };
+    }).then((response) => response.json()
+    )
+      .then((response) => {
+        setOrders(orders.map((item) => item.id === order.id ? {
+          ...order,
+          status: response.status,
+        }
+          : item))
 
+      })
+
+  };
 
   return (
     <div className="container-kitchen">
       <header className="header-kitchen">
-        <h1 className="chef"> 🍽️  COZINHA - Chef | {localStorage.getItem("name")}</h1>
         <div className="status-btn">
           <Button
-            className="btn-preparo"
+            className="btn-ready"
             type="submit"
             text="Em preparo"
             onClick={() => {
@@ -59,18 +64,20 @@ export const OrderHistory = () => {
             }}>Pedidos Pendentes
           </Button>
           <Button
-            className="btn-pronto"
+            className="btn-delivery"
+            type="submit"
+            text="Em preparo"
+            onClick={() => {
+              history.push('/readyOrders')
+            }}>Pedidos Prontos para Entrega
+          </Button>
+          <Button
+            className="btn-history"
             type="submit"
             text="Histórico dos Pedidos"
             onClick={() => {
               history.push('/orderHistory')
             }}>Histórico dos Pedidos
-          </Button>
-          <Button
-            className="returnBtn"
-            onClick={() => {
-              history.push('/Kitchen')
-            }}>Voltar
           </Button>
           <Button className="logoutBtn" onClick={() => {
             localStorage.clear()

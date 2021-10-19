@@ -20,6 +20,7 @@ export const Kitchen = () => {
       .then((response) => {
         response.json()
           .then((json) => {
+            console.log(json)
             const preparingOrder = json.filter(
               (item) =>
                 item.status.includes('preparing') ||
@@ -43,11 +44,17 @@ export const Kitchen = () => {
         Authorization: `${token}`,
       },
       body: JSON.stringify(status),
-    }).then((response) => {
-      response.json().then(() => {
+    }).then((response) => response.json()
+    )
+      .then((response) => {
+        setAllOrders(allOrders.map((item) => item.id === data.id ? {
+          ...data,
+          status: response.status,
+        }
+          : item))
 
-      });
-    });
+      })
+
   };
 
   const handleFinished = (data) => {
@@ -62,20 +69,24 @@ export const Kitchen = () => {
         Authorization: `${token}`,
       },
       body: JSON.stringify(status),
-    }).then((response) => {
-      response.json().then(() => {
-
-      });
-    });
+    }).then((response) => response.json()
+    )
+      .then((response) => {
+        setAllOrders(allOrders.map((item) => item.id === data.id ? {
+          ...data,
+          status: response.status,
+        }
+          : item))
+      })
   };
 
   return (
     <div className="container-kitchen">
       <header className="header-kitchen">
-        <h1 className="chef"> 🍽️  COZINHA - Chef | {localStorage.getItem("name")} </h1>
+        <h1 className="chef">Chef | {localStorage.getItem("name")} </h1>
         <div className="status-btn">
           <Button
-            className="btn-preparo"
+            className="btn-pending"
             type="submit"
             text="Em preparo"
             onClick={() => {
@@ -83,7 +94,7 @@ export const Kitchen = () => {
             }}>Pedidos Pendentes
           </Button>
           <Button
-            className="btn-pronto"
+            className="btn-history"
             type="submit"
             text="Histórico dos Pedidos"
             onClick={() => {
@@ -102,6 +113,8 @@ export const Kitchen = () => {
       </div>
       <div className="container-card-orders">
         {sortListOrders().map((order) => (
+          (order.status === 'pending' || order.status === 'preparing')
+          &&
           <Orders
             key={order.id}
             order={order}
