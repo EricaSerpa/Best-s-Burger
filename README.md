@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+<h3 align="center">
+    <img alt="Logo" title="#logo" src=https://ik.imagekit.io/vd8jwzhk56v/icon_9XTSEfEAX.png?updatedAt=1634613119936 width="200px">
+</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+O objetivo do projeto, desenvolver uma aplicação para gerenciamento de pedidos, e sincronizar as informações de comandas entre cozinha e salão. Foi desenvolvida pensando na usabilidade dos funcionários em tablet. 
 
-### `npm start`
+<h4> Você pode acessar a aplicação <a href="https://bestsburger.netlify.app/">clicando aqui</a> e utilizar um dos logins de teste abaixo:</h4>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<div align='center'>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+|             Salão            	|           Cozinha           	|
+|:----------------------------:	|:---------------------------:	|
+|   atendente@bestsburger.com   |     chef@bestsburger.com      |
+|            123456            	|            123456           	|
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Índice
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [1. Projeto](#1-projeto)
+- [2. Processo de criação](#2-processo-de-criação)
+  - [Organização](#-organização)
+  - [Fluxograma](#-fluxograma)
+  - [Protótipo](#-protótipo)
+- [3. Desenvolvedora](#-desenvolvedora)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## - Projeto
 
-### `npm run eject`
+Projeto proposto no bootcamp da [Laboratória](https://www.laboratoria.la/br).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+ Best's Burger está em crescimento e precisa de uma aplicação que a interface permita os atendentes realize pedidos utilizando um tablet e enviá-los para a cozinha para que sejam preparados de forma ordenada e eficiente. E que permita que os Chefs de Cozinha vejam os pedidos, marcar que o pedido está em preparo e notificar os atendentes que o pedido está pronto para ser servido. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## - Processo de criação
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+###Organização
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Toda a organização de tarefas e processos foram realizadas no Git Projects utilizando o sistema kanban e metodologia ágil. Depois de toda a organização feita, foram definidos os critérios de aceitação e definição de pronto, tempo de realização de cada tarefa e o que seria entregue em cada sprint. 
 
-## Learn More
+ ###Fluxograma
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Ao entender bem a necessidade do cliente, desenvolvi também fluxogramas para entender qual seria o fluxo do usuário dentro da plataforma.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Abaixo o fluxograma utilizando ferramenta Whimsical:
 
-### Code Splitting
+![img](https://ik.imagekit.io/vd8jwzhk56v/Captura_de_Tela_2021-10-19_às_00.57.29_KRdF6yigk0.png?updatedAt=1634615933602)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+###Protótipo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ Vários detalhes foram pensados para entregar uma aplicação que fosse intuitiva e para melhorar ainda mais a experiência na utilização. A ferramenta utilizada para desenvolvimento dos protótipos foi o Figma.
+ 
+ ![img](https://ik.imagekit.io/vd8jwzhk56v/Captura_de_Tela_2021-10-18_às_01.13.06_-YFbDI0-f0.png?updatedAt=1634613119550)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## - Desenvolvedora
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Este projeto foi desenvolvido por:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th align="center">Erica Serpa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">
+          <a href="#">
+            <img src="https://avatars.githubusercontent.com/u/83040250?s=400&u=a60f28a160d78c7aa538db6eb93ce60116d57543&v=4" width="100px;" alt="Foto da Erica Serpa no GitHub"/><br>
+          </a>
+        </td>
+        <td align="center">
+          <a href="https://github.com/EricaSerpa">
+            <img alt="GitHub - Erica Serpa" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" style="max-width: 100%;">
+          </a>
+          <a href="https://www.linkedin.com/in/ericaserpa/">
+            <img alt="LinkedIn - Erica Serpa" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white">
+          </a>
+        </td>
+        <div/>
