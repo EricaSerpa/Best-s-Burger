@@ -38,20 +38,21 @@
     margin-top: 1%;
 }
 
-.linkRequest {
+.btn-ready,
+.btn-history {
     border-radius: 30px;
     background: var(--ice);
-    width: 18rem;
-    height: 2.100rem;
-    cursor: pointer;
+    color: var(--aqua);
     font-size: 18px;
     font-family: Cabin Sketch;
     font-style: normal;
     border: none;
-    color: var(--aqua);
+    cursor: pointer;
+    width: 18rem;
+    height: 2.100rem;
     text-align: center;
     padding: 5px;
-}
+    }
 
 .form-hall-inputs input {
     display: flex;

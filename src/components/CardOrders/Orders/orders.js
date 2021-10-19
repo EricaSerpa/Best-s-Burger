@@ -4,7 +4,7 @@ import { Button } from '../../Button';
 
 
 export default function Orders({
-    order,
+   order,
     handlePreparing,
     handleFinished
 }) {

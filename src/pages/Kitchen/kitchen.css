@@ -19,6 +19,7 @@
     }
 
 
+    .atendent,
     .chef {
         font-family: Cabin Sketch;
         font-style: normal;
@@ -34,10 +35,13 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
-    .btn-preparo,
-    .btn-pronto {
+    .btn-delivery,
+    .btn-history,
+    .btn-pending {
         border-radius: 30px;
         background: var(--ice);
         color: var(--aqua);
