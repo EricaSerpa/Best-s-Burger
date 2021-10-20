@@ -22,11 +22,11 @@ O objetivo do projeto, desenvolver uma aplicação para gerenciamento de pedidos
 
 ## Índice
 
-[1. Projeto](#-projeto)
-[2. Planejamento e Organização](#-planejamento-e-organizacao)
-[3. Protótipo](#-Prototipo)
-[4. Tecnologias Utilizadas](#-Tecnologias-Utilizadas)
-[5. Desenvolvedora](#-desenvolvedora)
+ - [1. Projeto](#1-projeto)
+ - [2. Planejamento e Organização](#2-planejamento-e-organizacao)
+ - [3. Protótipo](#3-prototipo)
+ - [4. Tecnologias Utilizadas](#4-tecnologias-utilizadas)
+ - [5. Desenvolvedora](#5-desenvolvedora)
 
 ---
 
@@ -89,16 +89,17 @@ Este projeto foi desenvolvido por:
     <tbody>
       <tr>
         <td align="center">
-            <th align="center">Erica Serpa</th>
+            <th align="center"><a href="https://github.com/EricaSerpa">Erica Serpa
           </a>
         </td>
         <td align="center">
-          <a href="https://github.com/EricaSerpa">
-            <img alt="GitHub - Erica Serpa" src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" style="max-width: 100%;">
-          </a>
           <a href="https://www.linkedin.com/in/ericaserpa/">
             <img alt="LinkedIn - Erica Serpa" src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white">
           </a>
         </td>
     </table>
         <div/>
+        
+        
+        
+        
