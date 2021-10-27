@@ -29,7 +29,7 @@ O objetivo do projeto, desenvolver uma aplicação para gerenciamento de pedidos
  - [5. Desenvolvedora](#5-desenvolvedora)
 
 ---
-
+<a id="1-projeto"></a>
 ## 1.Projeto
 
 Projeto proposto no bootcamp da [Laboratória](https://www.laboratoria.la/br).
@@ -37,7 +37,7 @@ Projeto proposto no bootcamp da [Laboratória](https://www.laboratoria.la/br).
  Best's Burger está em crescimento e precisa de uma aplicação que a interface permita os atendentes realize pedidos utilizando um tablet e enviá-los para a cozinha para que sejam preparados de forma ordenada e eficiente. E que permita que os Chefs de Cozinha vejam os pedidos, marcar que o pedido está em preparo e notificar os atendentes que o pedido está pronto para ser servido. 
  
 ---
-
+<a id="2-planejamento-e-organizacao"></a>
 ## 2.Planejamento e Organização
 
 *Organização*
@@ -50,7 +50,7 @@ Ao entender bem a necessidade do cliente, desenvolvi também fluxogramas para en
 O fluxograma utilizando ferramenta Whimsical.
 
 ---
-
+<a id="3-prototipo"></a>
 ## 3.Protótipo
 
  Vários detalhes foram pensados para entregar uma aplicação que fosse intuitiva e para melhorar ainda mais a experiência na utilização. 
@@ -59,7 +59,7 @@ O fluxograma utilizando ferramenta Whimsical.
  ![img](https://ik.imagekit.io/vd8jwzhk56v/Captura_de_Tela_2021-10-18_às_01.13.06_-YFbDI0-f0.png?updatedAt=1634613119550)
  
  ---
-
+<a id="4-tecnologias-utilizadas"></a>
 ## 4.Tecnologias Utilizadas
 
 | Ferramenta | Descrição |
@@ -74,7 +74,7 @@ O fluxograma utilizando ferramenta Whimsical.
 | `Figma` | Editor gráfico de vetor e prototipagem de projetos |
 
 ---
-
+<a id="5-desenvolvedora"></a>
 ## 5.Desenvolvedora
 
 Este projeto foi desenvolvido por:
